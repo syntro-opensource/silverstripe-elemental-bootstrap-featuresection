@@ -75,6 +75,7 @@ class Feature extends BaseItem
                 'png',
                 'gif'
             ]);
+            $iconField->setFolderName('Uploads/Features');
             $iconField->setDescription(_t(
                 __CLASS__ . '.AllowedExtensions',
                 'Allowed extensions: *.svg, *.png and *.gif. Use a square image and make sure the background is transparent.'
