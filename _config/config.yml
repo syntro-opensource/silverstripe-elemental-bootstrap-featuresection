@@ -1,0 +1,10 @@
+---
+name: config-silverstripe-elemental-bootstrap-featuresection
+After:
+  - '#assets'
+---
+Silverstripe\Assets\File:
+  # file_types:
+  #   svg: 'Scalable Vector Graphic'
+  allowed_extensions:
+    - svg
