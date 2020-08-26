@@ -27,6 +27,7 @@ use Syntro\SilverStripeElementalBootstrapFeatureSection\Model\Feature;
  */
 class IllustratedFeatureSection extends BootstrapSectionBaseElement
 {
+    private static $icon = 'elemental-icon-illustrated-features';
     /**
      * This defines the block name in the CSS
      *
