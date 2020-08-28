@@ -19,7 +19,6 @@ use gorriecoe\LinkField\LinkField;
 use Syntro\SilverStripeElementalBaseitems\Elements\BootstrapSectionBaseElement;
 use Syntro\SilverStripeElementalBootstrapFeatureSection\Model\Feature;
 
-
 /**
  *  Bootstrap based feature section with image
  *
@@ -151,7 +150,6 @@ class IllustratedFeatureSection extends BootstrapSectionBaseElement
                 ),
                 'Features'
             );
-
         });
 
         return parent::getCMSFields();
@@ -175,6 +173,11 @@ class IllustratedFeatureSection extends BootstrapSectionBaseElement
         return $blockSchema;
     }
 
+    /**
+     * getType
+     *
+     * @return string
+     */
     public function getType()
     {
         return _t(__CLASS__ . '.BlockType', 'Illustrated Feature Section');

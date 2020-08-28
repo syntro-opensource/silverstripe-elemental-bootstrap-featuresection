@@ -17,7 +17,6 @@ use gorriecoe\LinkField\LinkField;
 use Syntro\SilverStripeElementalBaseitems\Elements\BootstrapSectionBaseElement;
 use Syntro\SilverStripeElementalBootstrapFeatureSection\Model\Feature;
 
-
 /**
  *  Bootstrap based Feature section
  *
@@ -136,7 +135,6 @@ class FeatureSection extends BootstrapSectionBaseElement
 
                 $fields->addFieldToTab('Root.Main', $features);
             }
-
         });
 
         return parent::getCMSFields();
@@ -160,6 +158,11 @@ class FeatureSection extends BootstrapSectionBaseElement
         return $blockSchema;
     }
 
+    /**
+     * getType
+     *
+     * @return string
+     */
     public function getType()
     {
         return _t(__CLASS__ . '.BlockType', 'Feature Section');
