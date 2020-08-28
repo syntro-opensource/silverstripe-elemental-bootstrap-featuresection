@@ -1,4 +1,4 @@
-# SilverStripe elemental bootstrap alertsection
+# SilverStripe elemental bootstrap feature sections
 
 [![Build Status](https://travis-ci.com/syntro-opensource/silverstripe-elemental-bootstrap-featuresection.svg?branch=master)](https://travis-ci.com/syntro-opensource/silverstripe-elemental-bootstrap-featuresection)
 [![phpstan](https://img.shields.io/badge/PHPStan-enabled-success)](https://github.com/phpstan/phpstan)
@@ -10,7 +10,7 @@ This module is part of a larger collection. See
 [`syntro/silverstripe-elemental-bootstrap-collection`](https://github.com/syntro-opensource/silverstripe-elemental-bootstrap-collection)
 for details.
 
-Provides a simple section alert.
+Provides two sections useful for displaying product features/business fea
 
 ## Requirements
 
@@ -31,9 +31,9 @@ composer require syntro/silverstripe-elemental-bootstrap-featuresection
 See [License](license.md)
 
 ## Documentation
- * [Color](docs/en/colors.md)
- * [Icons](docs/en/icons.md)
- * [Customize](docs/en/customizing.md)
+These two sections render a set of features on your Page.
+
+All configuration options follow [the base items config](https://github.com/syntro-opensource/silverstripe-elemental-bootstrap-baseitems#documentation).
 
 <!-- ## Example configuration (optional)
 If your module makes use of the config API in SilverStripe it's a good idea to provide an example config

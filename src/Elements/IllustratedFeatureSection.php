@@ -70,16 +70,9 @@ class IllustratedFeatureSection extends BootstrapSectionBaseElement
      * @config
      * @var array
      */
-    private static $background_colors = [
-        'default' => 'Default',
-        'light' => 'Lightgrey',
-        'dark' => 'Dark',
-    ];
+    private static $background_colors = [];
 
-    private static $text_colors = [
-        'default' => 'Default',
-        'white' => 'White'
-    ];
+    private static $text_colors = [];
 
     /**
      * Color mapping from background color. This is mainly intended
@@ -89,10 +82,7 @@ class IllustratedFeatureSection extends BootstrapSectionBaseElement
      * @config
      * @var array
      */
-    private static $text_colors_by_background = [
-        'light' => 'default',
-        'dark' => 'light',
-    ];
+    private static $text_colors_by_text = [];
 
     private static $db = [
         'Content' => 'Text',
@@ -115,11 +105,28 @@ class IllustratedFeatureSection extends BootstrapSectionBaseElement
     ];
 
     /**
+     * fieldLabels - apply field labels
+     *
+     * @param  boolean $includerelations = true
+     * @return array
+     */
+    public function fieldLabels($includerelations = true)
+    {
+        $labels = parent::fieldLabels($includerelations);
+        $labels['Title'] = _t(__CLASS__ . '.TITLE', 'Title');
+        $labels['Content'] = _t(__CLASS__ . '.CONTENT', 'Text');
+        $labels['Image'] = _t(__CLASS__ . '.IMAGE', 'Image');
+        return $labels;
+    }
+
+    /**
      * @return FieldList
      */
     public function getCMSFields()
     {
         $this->beforeUpdateCMSFields(function ($fields) {
+
+            $fields->dataFieldByName('Content')->setTitle($this->fieldLabel('Content'));
 
             if ($this->ID) {
                 /** @var GridField $features */
@@ -140,7 +147,7 @@ class IllustratedFeatureSection extends BootstrapSectionBaseElement
                 'Root.Main',
                 UploadField::create(
                     'Image',
-                    'Image'
+                    $this->fieldLabel('Image')
                 ),
                 'Features'
             );
@@ -155,7 +162,7 @@ class IllustratedFeatureSection extends BootstrapSectionBaseElement
      */
     public function getSummary()
     {
-        return DBField::create_field('HTMLText', $this->Content)->Summary(20);
+        return implode(', ', $this->Features()->map('Title')->keys());
     }
 
     /**

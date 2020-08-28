@@ -1,3 +1,16 @@
 de:
-  Syntro\SilverStripeElementalBootstrapAlertSection\Elements\AlertSection:
-    BlockType: Warnung
+  Syntro\SilverStripeElementalBootstrapFeatureSection\Elements\FeatureSection:
+    BlockType: Feature Abschnitt
+    TITLE: Titel
+    CONTENT: Text
+  Syntro\SilverStripeElementalBootstrapFeatureSection\Elements\IllustratedFeatureSection:
+    BlockType: Bebilderter Feature Abschnitt
+    TITLE: Titel
+    IMAGE: Bild
+    CONTENT: Text
+  Syntro\SilverStripeElementalBootstrapFeatureSection\Model\Feature:
+    ICON: Symbol
+    TITLE: Titel
+    SUMMARY: Zusammenfassung
+    CALLTOACTIONLINK: Call to action Link
+    CONTENT: Text

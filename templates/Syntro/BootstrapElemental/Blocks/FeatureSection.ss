@@ -22,7 +22,7 @@
                 <p>$Content</p>
                 <% if CTALink %>
                     <% with CTALink %>
-                        <a {$IDAttr} class="text-$Up.Up.ComputedTextColor" href="{$LinkURL}" {$TargetAttr}>
+                        <a {$IDAttr} class="text-$Up.Up.LinkColor" href="{$LinkURL}" {$TargetAttr}>
                             <%t Syntro\SilverStripeElementalBootstrapFeatureSection\Model\Feature.CTA 'Read more...' %>
                         </a>
                     <% end_with %>

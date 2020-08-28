@@ -50,6 +50,30 @@ class Feature extends BaseItem
         'Icon'
     ];
 
+    private static $summary_fields = [
+        'Icon.StripThumbnail',
+        'Title',
+        'Content.Summary'
+    ];
+
+    /**
+     * fieldLabels - apply field labels
+     *
+     * @param  boolean $includerelations = true description
+     * @return array                         description
+     */
+    public function fieldLabels($includerelations = true)
+    {
+        $labels = parent::fieldLabels($includerelations);
+        $labels['Icon.StripThumbnail'] = _t(__CLASS__ . '.ICON', 'Icon');
+        $labels['Icon'] = _t(__CLASS__ . '.ICON', 'Icon');
+        $labels['Title'] = _t(__CLASS__ . '.TITLE', 'Title');
+        $labels['Content.Summary'] = _t(__CLASS__ . '.SUMMARY', 'Summary');
+        $labels['CTALink'] = _t(__CLASS__ . '.CALLTOACTIONLINK', 'Call to action Link');
+        $labels['Content'] = _t(__CLASS__ . '.CONTENT', 'Text');
+        return $labels;
+    }
+
     /**
      * @return FieldList
      */
@@ -60,6 +84,7 @@ class Feature extends BaseItem
             $fields->removeByName([
                 'Sort',
                 'SectionID',
+                'IllustratedSectionID',
             ]);
 
             // Add Image Upload Field
@@ -67,7 +92,7 @@ class Feature extends BaseItem
                 'Root.Main',
                 $iconField = UploadField::create(
                     'Icon',
-                    'Icon'
+                    $this->fieldLabel('Icon')
                 )
             );
             $iconField->setAllowedExtensions([
@@ -88,7 +113,7 @@ class Feature extends BaseItem
                 [
                     LinkField::create(
                         'CTALink',
-                        'Call to action',
+                        $this->fieldLabel('CTALink'),
                         $this
                     )
                 ]
@@ -99,7 +124,7 @@ class Feature extends BaseItem
                 'Root.Main',
                 TextareaField::create(
                     'Content',
-                    'Content'
+                    $this->fieldLabel('Content')
                 ),
                 'CTALink'
             );
