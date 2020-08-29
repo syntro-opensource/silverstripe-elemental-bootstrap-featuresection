@@ -160,7 +160,15 @@ class IllustratedFeatureSection extends BootstrapSectionBaseElement
      */
     public function getSummary()
     {
-        return implode(', ', $this->Features()->map('Title')->keys());
+        return sprintf(
+            '%s: "%s"',
+            _t(
+                __CLASS__ . '.SUMMARY',
+                'one feature|{count} features',
+                ['count' => $this->Features()->count()]
+            ),
+            implode('", "', $this->Features()->map('Title')->keys())
+        );
     }
 
     /**
@@ -170,6 +178,12 @@ class IllustratedFeatureSection extends BootstrapSectionBaseElement
     {
         $blockSchema = parent::provideBlockSchema();
         $blockSchema['content'] = $this->getSummary();
+        /** @var Image|null $image */
+        $image = $this->Image();
+        if ($image && $image->exists() && $image->getIsImage()) {
+            $blockSchema['fileURL'] = $image->CMSThumbnail()->getURL();
+            $blockSchema['fileTitle'] = $image->getTitle();
+        }
         return $blockSchema;
     }
 

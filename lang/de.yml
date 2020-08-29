@@ -3,11 +3,17 @@ de:
     BlockType: Feature Abschnitt
     TITLE: Titel
     CONTENT: Text
+    SUMMARY:
+      one: 'Ein Feature'
+      other: '{count} Features'
   Syntro\SilverStripeElementalBootstrapFeatureSection\Elements\IllustratedFeatureSection:
     BlockType: Bebilderter Feature Abschnitt
     TITLE: Titel
     IMAGE: Bild
     CONTENT: Text
+    SUMMARY:
+      one: 'Ein Feature'
+      other: '{count} Features'
   Syntro\SilverStripeElementalBootstrapFeatureSection\Model\Feature:
     ICON: Symbol
     TITLE: Titel

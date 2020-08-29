@@ -145,8 +145,15 @@ class FeatureSection extends BootstrapSectionBaseElement
      */
     public function getSummary()
     {
-        return implode(', ', $this->Features()->map('Title')->keys());
-    }
+        return sprintf(
+            '%s: "%s"',
+            _t(
+                __CLASS__ . '.SUMMARY',
+                'one feature|{count} features',
+                ['count' => $this->Features()->count()]
+            ),
+            implode('", "', $this->Features()->map('Title')->keys())
+        );    }
 
     /**
      * @return array
