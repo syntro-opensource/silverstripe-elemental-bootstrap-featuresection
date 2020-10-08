@@ -14,7 +14,6 @@ use DNADesign\Elemental\Models\BaseElement;
 use BucklesHusky\FontAwesomeIconPicker\Forms\FAPickerField;
 use gorriecoe\Link\Models\Link;
 use gorriecoe\LinkField\LinkField;
-use Syntro\SilverStripeElementalBaseitems\Elements\BootstrapSectionBaseElement;
 use Syntro\SilverStripeElementalBootstrapFeatureSection\Model\Feature;
 
 /**
@@ -22,7 +21,7 @@ use Syntro\SilverStripeElementalBootstrapFeatureSection\Model\Feature;
  *
  * @author Matthias Leutenegger <hello@syntro.ch>
  */
-class FeatureSection extends BootstrapSectionBaseElement
+class FeatureSection extends BaseElement
 {
     private static $icon = 'elemental-icon-features';
     /**
