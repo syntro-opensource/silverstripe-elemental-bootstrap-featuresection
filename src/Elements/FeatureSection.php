@@ -14,7 +14,6 @@ use DNADesign\Elemental\Models\BaseElement;
 use BucklesHusky\FontAwesomeIconPicker\Forms\FAPickerField;
 use gorriecoe\Link\Models\Link;
 use gorriecoe\LinkField\LinkField;
-use DNADesign\Elemental\Models\BaseElement;
 use Syntro\SilverStripeElementalBootstrapFeatureSection\Model\Feature;
 
 /**
