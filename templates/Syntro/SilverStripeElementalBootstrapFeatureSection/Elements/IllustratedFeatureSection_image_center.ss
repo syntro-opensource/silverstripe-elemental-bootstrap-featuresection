@@ -45,7 +45,7 @@
     </div>
 
 
-    <div class="align-self-center col-10 col-md-5 col-lg-4 col-xl-3">
+    <div class="align-self-center col-10 col-md-5 col-lg-4 col-xl-3 my-4">
         <img class="img-fluid" src="$Image.URL" alt="$Title">
     </div>
 
