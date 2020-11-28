@@ -152,7 +152,8 @@ class FeatureSection extends BaseElement
                 ['count' => $this->Features()->count()]
             ),
             implode('", "', $this->Features()->map('Title')->keys())
-        );    }
+        );
+    }
 
     /**
      * @return array
