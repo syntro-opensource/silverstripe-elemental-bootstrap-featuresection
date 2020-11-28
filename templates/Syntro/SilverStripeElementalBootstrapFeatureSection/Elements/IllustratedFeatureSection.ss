@@ -3,16 +3,8 @@
         <img class="img-fluid" src="$Image.URL" alt="$Title">
     </div>
     <div class="col-12 col-md-6 col-lg-7 col-xl-8 py-4">
-        <% if ShowTitle || Content %>
-            <div class="{$ElementName}__contentholder col-12 col-md-10 col-lg-8 mb-5">
-                <% if ShowTitle %>
-                    <h2 class="{$ElementName}__title mb-3">$Title</h2>
-                <% end_if %>
-                <% if Content %>
-                <p class="{$ElementName}__content">$Content</p>
-                <% end_if %>
-            </div>
-        <% end_if %>
+        <% include Syntro\SilverStripeElementalBaseitems\ContentBlock %>
+
         <% loop Features %>
             <div class="{$Up.ElementName}__feature pt-4">
                 <div class="media">

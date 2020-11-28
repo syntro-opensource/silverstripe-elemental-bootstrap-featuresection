@@ -1,15 +1,5 @@
-<div class="row justify-content-center text-center">
-    <% if ShowTitle || Content %>
-        <div class="{$ElementName}__contentholder col-12 col-md-10 col-lg-8 mb-5">
-            <% if ShowTitle %>
-                <h2 class="{$ElementName}__title mb-3">$Title</h2>
-            <% end_if %>
-            <% if Content %>
-            <p class="{$ElementName}__content">$Content</p>
-            <% end_if %>
-        </div>
-    <% end_if %>
-</div>
+<% include Syntro\SilverStripeElementalBaseitems\ContentBlock %>
+
 <div class="row align-items-start justify-content-center ">
 
     <div class="col-12 col-lg-4">
