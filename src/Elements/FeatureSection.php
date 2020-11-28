@@ -89,12 +89,6 @@ class FeatureSection extends BaseElement
         'Features' => Feature::class
     ];
 
-    /**
-     * @var array
-     */
-    private static $owns = [
-        'Features'
-    ];
 
 
     /**

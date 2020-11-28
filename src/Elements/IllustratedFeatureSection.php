@@ -98,7 +98,6 @@ class IllustratedFeatureSection extends BaseElement
      * @var array
      */
     private static $owns = [
-        'Features',
         'Image'
     ];
 
